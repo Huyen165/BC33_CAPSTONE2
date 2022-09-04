@@ -1,0 +1,16 @@
+@import url(../base/_base.scss);
+@import url(../themes/_variable.scss);
+.carousel {
+  background-image: url(../img/image\ 6.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.carousel .container img {
+  width: 821px;
+  height: 392px;
+  top: 5px;
+  left: 86px;
+}
