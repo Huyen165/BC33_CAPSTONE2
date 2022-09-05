@@ -1,2 +1,100 @@
-@import url(./_variable.scss);
-@import url(../base/_base.scss)
+@import '../base/base';
+@import '../themes/variable';
+.foot_item {
+    h6 {
+        color: $text-c1-dark;
+        font-size: $text-xl;
+        font-weight: $text-semibold;
+    }
+    a {
+        display: block;
+        color: $text-c1-dark;
+        text-decoration: none;
+    }
+    .red_button {
+        color: $text-danger;
+    }
+}
+
+main {
+    h1 {}
+    .container {
+        text-align: center;
+        h1 {}
+        .form_content {
+            margin: 0 auto;
+            .form_group {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                .input {
+                    font-size: $text-3xl;
+                    font-weight: $text-regular;
+                    color: $text-c1-dark;
+                    line-height: $text-line;
+                    border: 0;
+                    background-color: $bg-c1-primary;
+                    margin-right: 30px;
+                    border-bottom: 5px solid $text-c1-primary;
+                    margin-bottom: 27px;
+                }
+                .button {
+                    text-align: left;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .submit {
+                padding: 8px 90px;
+                background-color: $text-c1-primary;
+                color: $text-c1-light;
+                border: 0;
+            }
+        }
+    }
+}
+
+// FOOTER 
+footer {
+    padding-bottom: 70px;
+    .top {
+        margin-top: 70px;
+        background-color: $bg-c2-primary;
+        .container {
+            padding: 30px 0;
+            .foot_top {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .foot_bot {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+    .bottom {
+        background-color: $bg-c2-brown;
+        .container {
+            padding: 30px 0;
+            .foot_top {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                background-color: $bg-c2-primary;
+            }
+            .foot_bot {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.back-to-top i {
+    color: $text-c1-dark;
+    font-size: $text-3xl;
+}
