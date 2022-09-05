@@ -11,18 +11,19 @@ document.querySelector('#btnSubmit').onclick = function() {
     console.log('register', CRregister);
 
     //Gọi api đưa dữ liệu về server
-    var promise = axios({
+    var input = axios({
         url: 'https://svcy.myclass.vn/api/SinhVienApi/ThemSinhVien',
         method: 'POST',
         data: CRregister,
     });
 
-    promise.then(function(result) {
+    input.then(function(result) {
         console.log(result.data);
+        alert("success");
 
     });
 
-    promise.catch(function(error) {
+    input.catch(function(error) {
         console.log(error);
     })
 }
