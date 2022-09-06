@@ -30,6 +30,9 @@ body {
 main .container {
   text-align: center;
 }
+main .container h1 {
+  padding: 30px 0;
+}
 main .container .form_content {
   margin: 0 auto;
 }
@@ -48,12 +51,21 @@ main .container .form_content .form_group .input {
   border-bottom: 5px solid #AE18E2;
   margin-bottom: 27px;
 }
-main .container .form_content .form_group .button {
+main .container .form_content .form_group .input::-moz-placeholder {
+  color: #000;
+}
+main .container .form_content .form_group .input:-ms-input-placeholder {
+  color: #000;
+}
+main .container .form_content .form_group .input::placeholder {
+  color: #000;
+}
+main .container .form_content .button {
   text-align: left;
   display: flex;
   justify-content: space-between;
 }
-main .container .form_content .submit {
+main .container .submit {
   padding: 8px 90px;
   background-color: #AE18E2;
   color: #fff;

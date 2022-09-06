@@ -5,14 +5,22 @@ document.querySelector('#btnSubmit').onclick = function() {
     CRregister.email = document.querySelector('#txtemail').value;
     CRregister.password = document.querySelector('#txtpassword').value;
     CRregister.phone = document.querySelector('#txtphone').value;
-    CRregister.gender = document.querySelector('#gender').value;
+    CRregister.gender = document.querySelector('#txtgender').value;
 
 
     console.log('register', CRregister);
 
+    var valid = true;
+    valid &=
+        kiemTraRong(CRregister.name, '#txtname', "Tên") & kiemTraRong(CRregister.email, '#txtemail', "Email") & kiemTraRong(CRregister.password, '#txtpassword', "Password") & kiemTraRong(CRregister.phone, '#txtphone', "Phone");
+
+    if (!valid) {
+        return;
+    }
+
     //Gọi api đưa dữ liệu về server
     var input = axios({
-        url: 'https://svcy.myclass.vn/api/SinhVienApi/ThemSinhVien',
+        url: 'https://shop.cyberlearn.vn/api/Users/signin',
         method: 'POST',
         data: CRregister,
     });
